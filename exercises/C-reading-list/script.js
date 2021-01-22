@@ -21,6 +21,9 @@ const books = [
 
 function readingList(books) {
  let content = document.getElementById("content");
+ content.innerHTML = "<strong>Book List</strong>";
+ content.style.fontSize = "30";
+
 let ul = document.createElement("ul");
 content.appendChild(ul);
 
@@ -28,14 +31,17 @@ books.forEach(book => {
   let li = document.createElement("li");
   let para = document.createElement("p");
   para.innerHTML = `${book.title} - ${book.author}`;
+  para.style.fontSize = "15px";
   let imgBook = document.createElement("img");
   imgBook.src = book.src;
+  imgBook.style.width ="60%";
   li.appendChild(para);
   li.appendChild(imgBook);
   ul.appendChild(li);
   ul.style.listStyle = "none";
   ul.style.display = "flex";
-  //li.style.padding = "10%";
+  li.style.width = "90%";
+  li.style.marginRight = "40px";
   
   if(book.alreadyRead) {
     li.style.backgroundColor = "green";
