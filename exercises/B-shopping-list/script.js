@@ -5,12 +5,11 @@ function shoppingList(arrayOfPeople) {
   let createUl = document.createElement("ul");
   content.appendChild(createUl);
 
-arrayOfPeople.forEach(item => {
-let createLi = document.createElement("li");
- createLi.innerHTML = item;
-createUl.appendChild(createLi);
-})
-
+  arrayOfPeople.forEach((item) => {
+    let createLi = document.createElement("li");
+    createLi.innerHTML = item;
+    createUl.appendChild(createLi);
+  });
 }
 
 shoppingList(shopping);
